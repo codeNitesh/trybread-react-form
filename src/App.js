@@ -20,10 +20,12 @@ function App() {
     var startDate = document.forms["myForm"]["startDate"].value;
 
     if(startDate == "") document.getElementById("startDate").classList.add("is-invalid");
+    else document.getElementById("startDate").classList.remove("is-invalid");
 
     var endDate = document.forms["myForm"]["endDate"].value;
 
     if(endDate == "") document.getElementById("endDate").classList.add("is-invalid");
+    else document.getElementById("endDate").classList.remove("is-invalid");
 
     if(startDate != "" && endDate != "" && endDate < startDate){
       document.getElementById("endDateError").classList = "";
